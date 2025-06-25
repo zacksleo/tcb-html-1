@@ -9,10 +9,9 @@ jobs:
   notify-main-repo:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger main repo's workflow
-        run: |
-          curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.MAIN_REPO_TOKEN }}" \
-            -H "Accept: application/vnd.github+json" \
-            https://api.github.com/repos/zacksleo/tcb-htmls/actions/workflows/import-html.yml/dispatches \
-            -d '{"ref":"main"}'
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.MAIN_REPO_TOKEN }}
+          repository: zacksleo/tcb-htmls
+          ref: main
