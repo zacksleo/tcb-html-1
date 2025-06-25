@@ -12,5 +12,6 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v3
         with:
+          event-type: my-event
           token: ${{ secrets.MAIN_REPO_TOKEN }}
           repository: zacksleo/tcb-htmls
