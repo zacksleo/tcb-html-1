@@ -14,6 +14,9 @@
 
 `New repository secret` 按钮，添加以下变量。
 
+
+![alt text](image.png)
+
 ![alt text](.github/docs/image-1.png)
 
 2. 添加变量，变量名称为： MAIN_REPO_TOKEN，变量的值找管理员索取。
